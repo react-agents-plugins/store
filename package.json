@@ -15,5 +15,50 @@
     "url": "https://github.com/react-agents-registry/store/issues"
   },
   "homepage": "https://github.com/react-agents-registry/store#readme",
-  "description": ""
+  "description": "",
+  "pluginConfig": {
+    "type": "react-agents:1.0.0",
+    "parameters": {
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["payment", "subscription"],
+              "examples": ["payment"]
+            },
+            "name": {
+              "type": "string",
+              "examples": ["Art"]
+            },
+            "description": {
+              "type": "string",
+              "examples": ["An art piece"]
+            },
+            "amount": {
+              "type": "integer",
+              "examples": [499]
+            },
+            "currency": {
+              "type": "string",
+              "enum": ["usd"],
+              "examples": ["usd"]
+            },
+            "interval": {
+              "type": "string",
+              "enum": ["month", "year"],
+              "examples": ["month"]
+            },
+            "intervalCount": {
+              "type": "integer",
+              "examples": [1]
+            }
+          },
+          "required": ["type", "name", "amount", "currency", "interval", "intervalCount"]
+        }
+      }
+    }
+  }
 }
