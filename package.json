@@ -1,5 +1,5 @@
 {
-  "name": "store",
+  "name": "@react-agents-plugins/store",
   "version": "0.0.1",
   "main": "store.tsx",
   "scripts": {
